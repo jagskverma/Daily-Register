@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Qt Designer files
+*.pyc
+*.pyo
+*.pyd
+*.ui~
+
+# SQLite database
+*.sqlite3
+*.db
+
+# Environment files
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# VS Code / JetBrains
+.vscode/
+.idea/
+
+# PyInstaller / build
+build/
+dist/
+*.spec
+
+# Logs and backups
+*.log
+*.bak
+*.swp
+
+# Mac/Linux/Windows trash
+.DS_Store
+Thumbs.db

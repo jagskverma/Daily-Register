@@ -1,0 +1,4 @@
+PyQt5>=5.15
+sqlite3  # Built-in with Python, listed for reference
+requests  # For update-checking from GitHub
+
