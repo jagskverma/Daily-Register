@@ -1,1 +1,235 @@
-<!-- Qt Designer UI file placeholder -->
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BillingWindow</class>
+ <widget class="QWidget" name="BillingWindow">
+  <property name="geometry">
+   <rect>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DailyRegister - Billing</string>
+  </property>
+
+  <!-- Main Vertical Layout -->
+  <layout class="QVBoxLayout" name="mainLayout">
+   <!-- Top 1/3 Section -->
+   <item>
+    <layout class="QVBoxLayout" name="topSectionLayout">
+     <!-- New Item Entry Group -->
+     <item>
+      <widget class="QGroupBox" name="newItemGroup">
+       <property name="title">
+        <string>New Item Entry</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="itemCodeLineEdit">
+          <property name="placeholderText">
+           <string>Item Code</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="itemNameLineEdit">
+          <property name="placeholderText">
+           <string>Item Name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="weightLineEdit">
+          <property name="placeholderText">
+           <string>Weight</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="amountLineEdit">
+          <property name="placeholderText">
+           <string>Amount</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QCheckBox" name="markBillCheckBox">
+          <property name="text">
+           <string>Mark Bill</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QPushButton" name="addNewItemButton">
+          <property name="text">
+           <string>Add New Item</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+     <!-- Old Item Exchange Section -->
+     <item>
+      <widget class="QGroupBox" name="oldItemGroup">
+       <property name="title">
+        <string>Old Item Exchange</string>
+       </property>
+       <layout class="QFormLayout" name="formLayoutOldItem">
+        <item row="0" column="0">
+         <widget class="QComboBox" name="itemTypeComboBox">
+          <item>
+           <property name="text">
+            <string>Gold</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Silver</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Other</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="oldWeightLineEdit">
+          <property name="placeholderText">
+           <string>Weight</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="oldAmountLineEdit">
+          <property name="placeholderText">
+           <string>Amount</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="addOldItemButton">
+          <property name="text">
+           <string>Add Old Item</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+     <!-- Payment Details Section -->
+     <item>
+      <widget class="QGroupBox" name="paymentGroup">
+       <property name="title">
+        <string>Payment Details</string>
+       </property>
+       <layout class="QFormLayout" name="formLayoutPayment">
+        <item row="0" column="0">
+         <widget class="QComboBox" name="paymentTypeComboBox">
+          <item>
+           <property name="text">
+            <string>Cash</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Card</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>UPI</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="paymentAmountLineEdit">
+          <property name="placeholderText">
+           <string>Amount</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="paymentCommentsLineEdit">
+          <property name="placeholderText">
+           <string>Comments</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="addPaymentButton">
+          <property name="text">
+           <string>Add Payment</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+    </layout>
+   </item>
+
+   <!-- Middle Section: Date Range and Transaction List -->
+   <item>
+    <layout class="QVBoxLayout" name="middleSectionLayout">
+     <!-- Date Range Selector -->
+     <item>
+      <widget class="QDateEdit" name="dateRangeSelector">
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+
+     <!-- Transaction List -->
+     <item>
+      <widget class="QListWidget" name="transactionList">
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Bottom Section: Summary -->
+   <item>
+    <layout class="QHBoxLayout" name="bottomSectionLayout">
+     <!-- New Item Sales Summary -->
+     <item>
+      <widget class="QLabel" name="newItemSalesSummaryLabel">
+       <property name="text">
+        <string>New Item Sales Summary</string>
+       </property>
+      </widget>
+     </item>
+
+     <!-- Old Item Exchange Summary -->
+     <item>
+      <widget class="QLabel" name="oldItemExchangeSummaryLabel">
+       <property name="text">
+        <string>Old Item Exchange Summary</string>
+       </property>
+      </widget>
+     </item>
+
+     <!-- Payment Summary -->
+     <item>
+      <widget class="QLabel" name="paymentSummaryLabel">
+       <property name="text">
+        <string>Payment Summary</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+</ui>
